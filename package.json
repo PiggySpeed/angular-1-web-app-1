@@ -1,0 +1,33 @@
+{
+  "name": "angular-1-web-app-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "grunt",
+    "start": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PiggySpeed/angular-1-web-app-1.git"
+  },
+  "author": "PiggySpeed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PiggySpeed/angular-1-web-app-1/issues"
+  },
+  "homepage": "https://github.com/PiggySpeed/angular-1-web-app-1#readme",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-ui-bootstrap": "^2.5.0",
+    "bootstrap": "^3.3.7",
+    "less": "^2.7.2"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "http-server": "^0.9.0"
+  }
+}
