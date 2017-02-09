@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "grunt",
-    "start": "http-server"
+    "build": "browserify app/app.js -o app/build/bundle.js",
+    "watch": "watchify app/app.js -o app/build/bundle.js",
+    "start": "http-server app"
   },
   "repository": {
     "type": "git",
@@ -24,10 +25,12 @@
     "less": "^2.7.2"
   },
   "devDependencies": {
+    "browserify": "^14.0.0",
     "grunt": "^1.0.1",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-less": "^1.4.0",
     "grunt-contrib-watch": "^1.0.0",
-    "http-server": "^0.9.0"
+    "http-server": "^0.9.0",
+    "watchify": "^3.9.0"
   }
 }

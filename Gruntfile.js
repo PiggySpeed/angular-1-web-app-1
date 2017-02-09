@@ -3,13 +3,13 @@ module.exports = function(grunt) {
     concat: {
       js: {
         src: ['app/controllers/webappController.js'],
-        dest: 'build/scripts.js'
+        dest: 'app/build/scripts.js'
       }
     },
     less: {
       build: {
         src: ['app/styles/*.less'],
-        dest: 'build/style.css'
+        dest: 'app/build/style.css'
       }
     },
     watch: {
