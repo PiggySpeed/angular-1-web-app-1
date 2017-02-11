@@ -1,0 +1,87 @@
+// http://meyerweb.com/eric/tools/css/reset/
+// v2.0 | 20110126
+// License: none (public domain)
+//--------------------------------------------------------
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+textarea, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+button {
+  background-color: transparent;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// Main Page
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+// Chat Page
+.chat-container {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.chat-sidenav {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 200px;
+  background-color: cadetblue;
+}
+
+.chat-main {
+  display: flex;
+  height: 100%;
+  margin: 0 300px;
+  min-width: 500px;
+
+  border: 1px solid grey;
+}
+
+.chat-rightbar {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 50px;
+  background-color: cornflowerblue;
+}

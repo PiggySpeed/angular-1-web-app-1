@@ -3,24 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Angular 1 Web App Practice</title>
-  <link rel="stylesheet" href="styles/colors.less">
+  <link rel="stylesheet" href="styles/index.less">
 </head>
 <body>
-  <div ng-controller="HeadCtrl">
-    <h1>{{bear}}</h1>
-    <ul ng-repeat="animal in animals">
-      <li>{{animal.id}} - {{animal.type}} <button ng-click="deleteAnimal(animal.id)">X</button></li>
-    </ul>
-    <input ng-model="currentAnimal">
-    <button ng-click="addAnimal(currentAnimal)">Add Animal</button>
-  </div>
-
-  <div ng-controller="ListCtrl">
-    <ul ng-repeat="datum in data">
-      <li>{{datum.id}} - {{datum.name}}</li>
-    </ul>
-
-  </div>
+  <div class="main-container" ng-view></div>
 </body>
 <script src="build/bundle.js"></script>
 </html>
