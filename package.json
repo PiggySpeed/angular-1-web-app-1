@@ -6,6 +6,7 @@
   "scripts": {
     "build": "browserify --debug app/app.js -o app/build/bundle.js",
     "watch": "watchify --debug app/app.js -o app/build/bundle.js",
+    "dev": "gulp run",
     "start": "http-server app"
   },
   "repository": {
@@ -26,8 +27,27 @@
     "less": "^2.7.2"
   },
   "devDependencies": {
+    "autoprefixer": "^6.7.2",
     "browserify": "^14.0.0",
-    "http-server": "^0.9.0",
+    "connect-livereload": "^0.6.0",
+    "css-mqpacker": "^5.0.1",
+    "cssnano": "^3.10.0",
+    "express": "^4.14.1",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-deporder": "^1.1.0",
+    "gulp-embedlr": "^0.5.2",
+    "gulp-htmlclean": "^2.7.9",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-less": "^3.3.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-newer": "^1.3.0",
+    "gulp-postcss": "^6.3.0",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^2.0.1",
+    "postcss-assets": "^4.1.0",
+    "tiny-lr": "^1.0.3",
     "watchify": "^3.9.0"
   }
 }
