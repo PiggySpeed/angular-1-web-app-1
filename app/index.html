@@ -6,7 +6,11 @@
   <link rel="stylesheet" href="styles/index.less">
 </head>
 <body>
-  <div class="main-container" ng-view></div>
+  <div class="main-container">
+    <a ui-sref="front">Front</a>
+    <a ui-sref="chat">Chat</a>
+    <ui-view></ui-view>
+  </div>
 </body>
-<script src="build/bundle.js"></script>
+<script src="./dist/bundle.js"></script>
 </html>
