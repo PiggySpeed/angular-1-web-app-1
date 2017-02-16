@@ -1,0 +1,90 @@
+/* Color Palette */
+
+// Color Scheme
+// ------------------------------------------
+@primary:                           @blue-1;
+@primary-l:                         lighten(@primary, 10%);
+@primary-d:                         darken(@primary, 10%);
+
+@secondary:                         @triad-secondary;
+@secondary-l:                       lighten(@secondary, 10%);
+@secondary-d:                       darken(@secondary, 10%);
+
+@accent:                            @triad-tertiary;
+@accent-l:                          lighten(@accent, 10%);
+@accent-d:                          darken(@accent, 10%);
+
+@background-primary:                @white-2;
+@background-primary-l:              lighten(@background-primary, 10%);
+@background-primary-d:              darken(@background-primary, 10%);
+
+@background-secondary:              @grey-4;
+@background-secondary-l:            lighten(@background-secondary, 10%);
+@background-secondary-d:            darken(@background-secondary, 10%);
+
+@text-primary:                      @black-2;
+@text-primary-disabled:             lighten(@text-primary, 50%);
+@text-primary-hover:                @accent;
+
+@text-secondary:                    @grey-4;
+@text-secondary-disabled:           lighten(@text-secondary, 50%);
+@text-secondary-hover:              @accent;
+
+@a:                                 @grey-2;
+@a-hover:                           @primary-l;
+@a-active:                          @primary-l;
+@a-visited:                         @grey-2;
+
+@input:                             @white-2;
+@input-text:                        @text-primary;
+@input-hover:                       lighten(@input, 10%);
+@input-active:                      @white-1;
+@input-disabled:                    darken(@input, 10%);
+
+@button-primary:                    @white-2;
+@button-primary-background:         @accent-l;
+@button-primary-hover:              lighten(@button-primary-background, 10%);
+@button-primary-active:             darken(@button-primary-background, 10%);
+@button-primary-disabled:           @grey-2;
+
+@button-secondary:                  @black-2;
+@button-secondary-background:       @white-2;
+@button-secondary-hover:            darken(@button-secondary-background, 10%);
+@button-secondary-active:           lighten(@button-secondary, 10%);
+@button-secondary-disabled:         @grey-2;
+
+// Raw Colors
+// ------------------------------------------
+@white-1:                           #ffffff;
+@white-2:                           #ebebeb;
+@white-3:                           #d7d7d7;
+@white-4:                           #c3c3c3;
+
+@grey-1:                            #9b9b9b;
+@grey-2:                            #878787;
+@grey-3:                            #737373;
+@grey-4:                            #5f5f5f;
+
+@black-1:                           #373737;
+@black-2:                           #232323;
+@black-3:                           #0f0f0f;
+@black-4:                           #000000;
+
+@blue-1: #5157a5;
+
+// Animal Colors
+@pink-1: #ff9bbe;
+@blue-2: #7fa7d7;
+@green-1: #a8f7ca;
+@orange-1: #ffc72d;
+@red-1: #e04f00;
+
+
+// Generated Color Schemes
+// ------------------------------------------
+@complementary-base:                @primary;
+@complementary:                     spin(@complementary-base, 180);
+
+@triad-base:                        @primary;
+@triad-secondary:                   spin(@triad-base, -(360/3));
+@triad-tertiary:                    spin(@triad-base, (360/3));

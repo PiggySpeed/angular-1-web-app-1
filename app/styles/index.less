@@ -1,3 +1,7 @@
+@import './colors';
+@import './fonts';
+@import './layouts';
+
 // http://meyerweb.com/eric/tools/css/reset/
 // v2.0 | 20110126
 // License: none (public domain)
@@ -20,6 +24,7 @@ textarea, time, mark, audio, video {
   border: 0;
   font: inherit;
   vertical-align: baseline;
+  box-sizing: border-box;
 }
 
 button {
@@ -47,41 +52,313 @@ table {
   border-spacing: 0;
 }
 
+// ScrollBar - From https://css-tricks.com/custom-scrollbars-in-webkit/
+//--------------------------------------------------------
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background: #334048;
+}
+
+// Default Styles
+h1, h2, h3, h4, h5, h6 {
+  color:                     @text-primary;
+  font-family:               @header-family; }
+h1 { font-size:                 @h1-size; }
+h2 { font-size:                 @h2-size; }
+h3 { font-size:                 @h3-size; }
+h4 { font-size:                 @h4-size; }
+h5 { font-size:                 @h5-size; font-style: italic }
+h6 { font-size:                 @h6-size; }
+
+p  {
+  color:                      @text-primary;
+  font-size:                  @p-size;
+  font-family:                @body-family;
+  line-height:                @body-leading-spacing; }
+
+a  {
+  color:                      @a;
+  font-size:                  @a-size;
+  font-family:                @header-family;
+  line-height:                @body-leading-spacing;
+  &:hover                     { color: @a-hover; };
+  &:active                    { color: @a-active; };
+  &:visited                   { color: @a-visited; }; }
+
+ul, ol {
+  color:                      @text-primary;
+  display:                    block;
+  font-size:                  @li-size;
+  font-family:                @body-family;
+  line-height:                @body-leading-spacing;
+  list-style-type:            square;
+  margin:                     1em 0;
+  padding-left:               40px; }
+
+hr {
+  border:                     0;
+  border-top:                 1px solid @white-4;
+  display:                    block;
+  height:                     1px;
+  margin:                     @mar-rel-s 0;
+  padding:                    0; }
+
+button {
+  font-family: @header-family;
+  font-size: @button-size;
+}
+
+input {
+  border:                     none;
+  color:                      @input-text;
+  font-family:                @body-family;
+  font-size:                  @input-size;
+  min-height:                 2rem;
+  width:                      100%;
+  &:active                    {
+    border: -1px solid @input-active;
+    color: @text-primary
+  };
+  &:focus                     {
+    border: -1px solid @accent;
+    color: @text-primary
+  };
+  &:disabled                  { border: -1px solid @input-disabled; }; }
+
+// General Layout
+.view-row {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.view-col {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+}
+.ng-scope {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+
 // Main Page
 .main-container {
   display: flex;
+  flex-flow: column;
   height: 100vh;
   width: 100vw;
+}
+.top-nav {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: #12171a;
+}
+.top-nav-title {
+  color: @white-3;
+  font-family: @display-family;
+  font-weight: 200;
+  font-size: @font-l;
+  margin: @mar-rel-l;
+}
+.top-nav-link {
+  color: @white-3;
+  margin: 0 @mar-rel-m;
+}
+
+// animalPicker
+.animalpicker-container {
+  display: flex;
+  height: min-content;
+  width: min-content;
+  min-height: 50px;
+  min-width: 500px;
+  margin-top: @mar-rel-l;
+}
+
+// animalIcon
+.animal-icon {
+  padding: @pad-rel-m;
+  transition: 0.25s;
+  &:hover {
+    filter: brightness(75%);
+  }
+  &:active {
+    filter: brightness(50%);
+  }
+}
+
+// Front Container
+.front-container {
+  background-color: #40515b;
+  justify-content: center;
+  align-items: center;
+}
+.front-title {
+  color: @white-3;
+  font-family: @display-family;
+  font-size: @font-xxl;
+  font-weight: 200;
+}
+.front-subtitle {
+  color: @white-3;
+  font-weight: 100;
 }
 
 // Chat Page
 .chat-container {
   display: flex;
-  justify-content: space-between;
   flex: 1;
+  background-color: #40515b;
+  justify-content: space-between;
 }
 
+// Chat Side Nav
 .chat-sidenav {
+  align-items: center;
   display: flex;
+  flex: none;
   flex-flow: column;
+  justify-content: space-between;
   height: 100%;
-  width: 200px;
-  background-color: cadetblue;
+  width: 15rem;
+  padding-top: @pad-rel-l;
+  background-color: #334048;
 }
 
-.chat-main {
+.chat-exit-container {
   display: flex;
-  height: 100%;
-  margin: 0 300px;
-  min-width: 500px;
-
-  border: 1px solid grey;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  border-top: 1px solid #40515b;
+  transition: 0.25s;
+  &:hover {
+    background-color: #5157a5;
+  }
+  &:active {
+    background-color: #383c72;
+  }
 }
 
-.chat-rightbar {
+// Central Chat Panel
+.chat-main-container {
+  display: flex;
+  flex: none;
+  width: 100%;
+  height: 100%;
+  padding: @pad-rel-l;
+}
+
+// Chat Rooms
+.chat-room-container {
   display: flex;
   flex-flow: column;
+  flex: 1;
+  min-width: 600px;
+  max-width: 1000px;
   height: 100%;
+}
+.chat-room-compose {
+  display: flex;
+  width: 100%;
+  border: 4px solid #576d7b;
+  height: 8rem;
+}
+.chat-room-compose-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #576d7b;
+  border-right: 4px solid #576d7b;
+  outline: none;
+  height: 100%;
+  width: 4rem;
+  &:hover {
+    background-color: #41525c;
+  }
+  &:active {
+    background-color: #273036;
+  }
+}
+.chat-room-compose-area {
+  flex: 1;
+  background-color: #334048;
+  color: @white-3;
+  font-family: @body-family;
+  font-size: @font-m;
+  font-weight: 400;
+  padding: @pad-rel-m;
+  resize: none;
+}
+
+// Chat Room Window
+.chat-room-window {
+  display: flex;
+  flex-flow: column;
+  border: 4px solid #576d7b;
+  border-bottom: none;
+  flex: 1;
+  width: 100%;
+  overflow-y: scroll;
+}
+.chat-room-scroll {
+  display: flex;
+  flex-flow: column;
+  min-height: min-content;
+  width: 100%;
+}
+.chat-bubble-self {
+  border: none;
+  background-color: #334048;
+  padding: @pad-rel-m;
+  margin: @mar-rel-m;
+  border-radius: 5px;
+  height: min-content;
+  max-width: 500px;
+}
+.chat-bubble-header {
+  display: flex;
+  justify-content: flex-end;
+  height: 25px;
+  width: 100%;
+  padding: 5px;
+}
+.chat-bubble-header-text {
+  color: #a69dc0;
+  font-family: @body-family;
+  font-size: @font-s;
+  margin: 0 @mar-rel-s;
+}
+.chat-bubble-text {
+  color: #a69dc0;
+  font-family: @body-family;
+  font-size: @font-m;
+  word-wrap: break-word;
+}
+.chat-bubble-others {
+
+}
+
+
+// Chat Friends
+.chat-friends {
+  padding: @pad-rel-l 0;
+  display: flex;
+  flex: none;
+  flex-flow: column;
+  height: 100%;
+  width: 4rem;
+}
+.chat-friends-icons {
   width: 50px;
-  background-color: cornflowerblue;
+  height: 50px;
 }

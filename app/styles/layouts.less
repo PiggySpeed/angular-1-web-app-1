@@ -1,0 +1,75 @@
+/* Layouts */
+
+// Margins and Padding
+// ------------------------------------------
+@mar-rel-xxl: 4rem;
+@mar-rel-xl: 2rem;
+@mar-rel-l: 1rem;
+@mar-rel-m: 0.5rem;
+@mar-rel-s: 0.25rem;
+
+@pad-rel-l: 1.25rem;
+@pad-rel-m: 0.75rem;
+@pad-rel-s: 0.5rem;
+
+
+// Breakpoints - 480, 768, 1024px
+// ------------------------------------------
+@phone-portrait: 0;
+@tab-portrait: 48rem;
+@desktop-portrait: 64rem;
+
+@phone-landscape: 0;
+@tab-landscape: 48rem;
+@desktop-landscape: 64rem;
+
+// FlexBox Containers
+// ------------------------------------------
+.flex-row {
+  display: flex;
+  flex-flow: row;
+}
+.flex-col {
+  display: flex;
+  flex-flow: column;
+}
+.flex-row-space-between {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.flex-col-space-between {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.flex-row-space-around {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+.flex-col-space-around {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+
+// Page Layouts
+// ------------------------------------------
+.full-size {
+   align-items: center;
+   width: 100vw;
+   height: 100vh;
+ }
+.full-width {
+  width: 100vw;
+}
+.full-height {
+  height: 100vh;
+}
+.page-content {
+  width: 100vw;
+  min-height: 100vh;
+}

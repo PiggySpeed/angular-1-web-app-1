@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Angular 1 Web App Practice</title>
-  <link rel="stylesheet" href="styles/index.less">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:100,400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Raleway:200,400,500,900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
   <div class="main-container">
-    <a ui-sref="front">Front</a>
-    <a ui-sref="chat">Chat</a>
+    <div class="top-nav view-row">
+      <h1 class="top-nav-title">ANIMAL CHATTR</h1>
+      <a class="top-nav-link" ui-sref="front">Front</a>
+      <a class="top-nav-link" ui-sref="chat">Chat</a>
+    </div>
     <ui-view></ui-view>
   </div>
 </body>
-<script src="./dist/bundle.js"></script>
+<script src="./build.js"></script>
 </html>

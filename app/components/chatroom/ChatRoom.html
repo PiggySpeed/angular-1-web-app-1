@@ -1,0 +1,20 @@
+<div class="chat-room-container" ng-controller="AnimalChatCtrl">
+  <div scroll-bottom="chatLog" class="chat-room-window">
+    <div class="chat-room-scroll" ng-repeat="log in chatLog">
+      <div class="chat-bubble-self">
+        <div class="view-row chat-bubble-header">
+          <p class="chat-bubble-header-text">Id: {{ log.id }}</p>
+          <p class="chat-bubble-header-text">User: {{ log.userId }}</p>
+          <p class="chat-bubble-header-text">{{ log.timestamp }}</p>
+        </div>
+        <p class="chat-bubble-text">{{ log.text }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-room-compose">
+    <input type="button" class="chat-room-compose-submit" ng-click="submitMessage('wolf-1', currentText)"/>
+    <textarea title="chatroom-compose" class="chat-room-compose-area" ng-model="currentText"></textarea>
+  </div>
+
+</div>
