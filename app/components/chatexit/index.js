@@ -1,7 +1,7 @@
 module.exports = function chatExit() {
   return {
     restrict: 'E',
-    templateUrl: './components/chatexit/ChatExit.html',
+    templateUrl: './components/navbutton/SideDescription.html',
     replace: true,
     scope: {
       handleClick: '&'

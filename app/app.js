@@ -21,6 +21,8 @@ var animalIcon = require('./components/animalicon');
 var chatExit = require('./components/chatexit');
 var animalChat = require('./components/animalchat');
 var chatRoom = require('./components/chatroom');
+var navButton = require('./components/navbutton');
+var sideDescription = require('./components/sidedescription');
 
 // Utility Directives
 var scrollBottom = require('./directives/scrollbottom');
@@ -39,5 +41,7 @@ module.exports = angular.module('myApp', [uiRouter])
   .directive('chatExit', chatExit)
   .directive('animalChat', animalChat)
   .directive('chatRoom', chatRoom)
+  .directive('navButton', navButton)
+  .directive('sideDescription', sideDescription)
   .directive('scrollBottom', scrollBottom)
   .service('ChatSrv', ChatSrv);
