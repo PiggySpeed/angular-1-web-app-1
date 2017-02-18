@@ -3,11 +3,30 @@
 * pages/mocks.html
 * pages/mockpages/*.html
 **/
+@import './index.less';
 
 .mock-container {
   background-color: #40515b;
 }
 
+// Mock Default Page
+.mock-default-container {
+  align-items: center;
+  justify-content: center;
+}
+
+.mock-default-title {
+  color: @white-3;
+  font-family: @display-family;
+  font-weight: 200;
+}
+
+.mock-default-subtitle {
+  color: @white-3;
+  font-weight: 100;
+}
+
+// Side Navigation
 .mock-sidenav {
   align-items: center;
   display: flex;
@@ -18,17 +37,29 @@
   background-color: #334048;
 }
 
+// Description Layout Component
 .side-description-container {
   display: flex;
   flex-flow: column;
   height: 100%;
   width: 35rem;
+  padding: @pad-rel-l;
+}
+
+.side-description-frame {
+  align-items: center;
+  justify-content: center;
+  padding: @pad-rel-l;
 }
 
 .side-description-header {
-  height: 24px;
+  color: @white-3;
+  font-weight: 100;
+  text-align: right;
 }
 
 .side-description-text {
-  height: 24px;
+  color: @white-3;
+  font-weight: 100;
+  text-align: right;
 }

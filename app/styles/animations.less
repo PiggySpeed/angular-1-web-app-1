@@ -1,0 +1,171 @@
+/* Animations */
+
+// Durations
+.short {
+  -moz-animation-duration: 0.25s;
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+}
+
+.long {
+  -moz-animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+// Animations
+.fade-in {
+  -moz-animation-name: easePage;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-duration: 0.5s;
+
+  -webkit-animation-name: easePage;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-duration: 0.5s;
+
+  animation-name: easePage;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 0.5s;
+}
+@-moz-keyframes easePage {
+  0% {
+    -moz-transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    -moz-transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes easePage {
+  0% {
+    -webkit-transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes easePage {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.fade-in-opacity {
+  -moz-animation-name: fadeInOpacity;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-duration: 0.5s;
+
+  -webkit-animation-name: fadeInOpacity;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-duration: 0.5s;
+
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 0.5s;
+}
+@-moz-keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.delay5 {
+  -moz-animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.delay10 {
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.delay15 {
+  -moz-animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+.delay20 {
+  -moz-animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.fade-down-opacity {
+  -moz-animation-name: fadeDownOpacity;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: ease-out;
+  -moz-animation-duration: 0.5s;
+
+  -webkit-animation-name: fadeDownOpacity;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-out;
+  -webkit-animation-duration: 0.5s;
+
+  animation-name: fadeDownOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 0.5s;
+}
+@-moz-keyframes fadeDownOpacity {
+  0% {
+    opacity: 0;
+    bottom: -1rem;
+  }
+  100% {
+    opacity: 1;
+    bottom: -1.5rem;
+  }
+}
+@-webkit-keyframes fadeDownOpacity {
+  0% {
+    opacity: 0;
+    bottom: -1rem;
+  }
+  100% {
+    opacity: 1;
+    bottom: -1.5rem;
+  }
+}
+@keyframes fadeDownOpacity {
+  0% {
+    opacity: 0;
+    bottom: -1rem;
+  }
+  100% {
+    opacity: 1;
+    bottom: -1.5rem;
+  }
+}

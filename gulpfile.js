@@ -77,7 +77,7 @@ var tasks = {
   // LESS
   // --------------------------
   less: function() {
-    return gulp.src('./app/styles/*.less')
+    return gulp.src(['./app/styles/*.less', './app/styles/**/*.less'])
       // sourcemaps + sass + error handling
       .pipe(gulpif(!production, sourcemaps.init()))
       .pipe(less({
@@ -197,7 +197,7 @@ gulp.task('watch', ['assets', 'templates', 'less', 'browserify', 'browser-sync']
   // --------------------------
   // watch:less
   // --------------------------
-  gulp.watch('./app/styles/*.less', ['reload-less']);
+  gulp.watch(['./app/styles/*.less', './app/styles/**/*.less'], ['reload-less']);
 
   // --------------------------
   // watch:js

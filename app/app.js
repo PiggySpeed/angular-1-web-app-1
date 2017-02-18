@@ -12,6 +12,9 @@ var AnimalFriendsCtrl = require('./controllers/animalFriendsController.js');
 var AnimalChatCtrl = require('./controllers/animalChatController.js');
 var SideNavCtrl = require('./controllers/sideNavController.js');
 
+// Controllers - Mock
+var ScaleCtrl = require('./components/scalecomponent/scaleComponentController.js');
+
 // Services
 var ChatSrv = require('./services/chatService.js');
 
@@ -23,6 +26,10 @@ var animalChat = require('./components/animalchat');
 var chatRoom = require('./components/chatroom');
 var navButton = require('./components/navbutton');
 var sideDescription = require('./components/sidedescription');
+
+// Component directives - Mock
+var scaleContainer = require('./components/scalecomponent').scaleContainer;
+var scaleItem = require('./components/scalecomponent').scaleItem;
 
 // Utility Directives
 var scrollBottom = require('./directives/scrollbottom');
@@ -36,6 +43,7 @@ module.exports = angular.module('myApp', [uiRouter])
   .controller('AnimalFriendsCtrl', AnimalFriendsCtrl)
   .controller('AnimalChatCtrl', AnimalChatCtrl)
   .controller('SideNavCtrl', SideNavCtrl)
+  .controller('ScaleCtrl', ScaleCtrl)
   .directive('animalPicker', animalPicker)
   .directive('animalIcon', animalIcon)
   .directive('chatExit', chatExit)
@@ -44,4 +52,6 @@ module.exports = angular.module('myApp', [uiRouter])
   .directive('navButton', navButton)
   .directive('sideDescription', sideDescription)
   .directive('scrollBottom', scrollBottom)
+  .directive('scaleContainer', scaleContainer)
+  .directive('scaleItem', scaleItem)
   .service('ChatSrv', ChatSrv);

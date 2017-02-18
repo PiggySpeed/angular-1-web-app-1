@@ -20,6 +20,13 @@ module.exports = function($stateProvider, $urlRouterProvider) {
     templateUrl: '/pages/mocks.html'
   };
 
+  var mockDefault = {
+    name: 'mock/mockdefault',
+    parent: mock,
+    url: '/',
+    templateUrl: '/pages/mockpages/mockdefault.html'
+  };
+
   var rotateSelector = {
     name: 'mock/rotateselector',
     parent: mock,
@@ -34,9 +41,18 @@ module.exports = function($stateProvider, $urlRouterProvider) {
     templateUrl: '/pages/mockpages/ruler.html'
   };
 
+  var scale = {
+    name: 'mock/scale',
+    parent: mock,
+    url: '/scale',
+    templateUrl: '/pages/mockpages/scale.html'
+  };
+
   $stateProvider.state(front);
   $stateProvider.state(chat);
   $stateProvider.state(mock);
   $stateProvider.state(rotateSelector);
+  $stateProvider.state(mockDefault);
   $stateProvider.state(ruler);
+  $stateProvider.state(scale);
 };

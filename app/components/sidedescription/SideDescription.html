@@ -1,10 +1,10 @@
 <div class="view-row">
 
-  <ng-transclude class="view-col"></ng-transclude>
+  <ng-transclude class="view-col side-description-frame"></ng-transclude>
 
   <div class="side-description-container">
-    <h1 class="side-description-header">{{ sideHeader }}</h1>
-    <p class="side-description-text">{{ sideText }}</p>
+    <h3 class="side-description-header">{{ header.toUpperCase() }}</h3>
+    <p class="side-description-text">{{ text }}</p>
   </div>
 
 </div>
