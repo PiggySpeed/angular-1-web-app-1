@@ -1,13 +1,8 @@
 function scaleContainer() {
   return {
     restrict: 'E',
-    templateUrl: './components/scalecomponent/ScaleContainer.html',
-    controller: 'ScaleCtrl',
-    controllerAs: 'ctrl',
     replace: true,
-    scope: {
-      className: '@'
-    },
+    templateUrl: './components/scalecomponent/ScaleContainer.html',
     transclude: true
   }
 }
@@ -16,10 +11,11 @@ function scaleItem() {
   return {
     restrict: 'E',
     templateUrl: './components/scalecomponent/ScaleItem.html',
+    replace: true,
     controller: 'ScaleCtrl',
     controllerAs: 'ctrl',
-    replace: true,
     scope: {
+      index: '@',
       spriteClassFull: '@',
       spriteClassHalf: '@',
       spriteClassEmpty: '@',

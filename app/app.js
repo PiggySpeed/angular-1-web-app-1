@@ -17,6 +17,7 @@ var ScaleCtrl = require('./components/scalecomponent/scaleComponentController.js
 
 // Services
 var ChatSrv = require('./services/chatService.js');
+var ScaleSrv = require('./services/scaleService.js');
 
 // Component Directives
 var animalPicker = require('./components/animalpicker');
@@ -54,4 +55,5 @@ module.exports = angular.module('myApp', [uiRouter])
   .directive('scrollBottom', scrollBottom)
   .directive('scaleContainer', scaleContainer)
   .directive('scaleItem', scaleItem)
-  .service('ChatSrv', ChatSrv);
+  .service('ChatSrv', ChatSrv)
+  .service('ScaleSrv', ScaleSrv);
